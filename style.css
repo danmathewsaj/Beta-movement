@@ -1,0 +1,305 @@
+*{
+	transition: all 0.4s ease;
+	margin: 0;
+	font-family: dejavu sans;
+}
+@keyframes myAnimation{
+	from{
+		background-position: 0 0;
+	}
+	to{
+		background-position: 100% 0;
+	}
+}
+#animated {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(img/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.transp,.trans{
+	width: 100%;
+	height: 100%;
+	background: rgba(26,39,52,0.6);
+}
+.transp{
+	position: absolute;
+}
+.trans{
+	background: rgba(26,39,52,0.8);
+	}
+	
+.top{	
+	width: 100%;
+	height: 60px;
+	background: #1b0404;
+	top: 0;
+	position: fixed;
+	z-index: 1000;
+}
+#name{
+	position: absolute;
+	left: 30px;
+	top: 15px;
+}
+h1{
+	color: #fdf4f3;
+	font: lighter 25px dejavu sans;
+}
+#links{
+	position: absolute;
+	right: 30px;
+	top: 15px;
+}
+.act,.inact{
+	padding: 7px 20px;
+	color: #c93f2d;
+	text-decoration: none;
+}
+.act,.inact:hover{
+	color: #fdf4f3;
+	border-bottom: 1px solid #fdf4f3;
+}
+#mainHeader{
+	width: 45%;
+	margin: auto;
+	margin-top: 180px;
+	padding: 50px;
+}
+h2{
+	font: bold 70px Keraleeyam;
+	color: white;
+	text-align: center;
+}
+input,button{
+	padding: 11px;
+	border: none;
+	font: normal 16px dejavu sans;
+}
+input{
+	width: 75%;
+}
+button{
+	width: 25%;
+	background: #1b0404;
+	color: white;
+}
+.wrap{
+	position: absolute;
+	top: 100%;
+	background: white;
+	height: auto;
+	width: 100%;
+}
+.zero {
+    width: 100%;
+    height: 1200px;
+    background: url(img/bg3.png) fixed;
+    background-size: cover;
+    position: relative; /* Ensures proper layering */
+}
+
+.zero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1; /* Keep it below the boxes */
+}
+#box {
+    width: 80%;
+    margin: auto;
+    height: 350px;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+}
+
+.view {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    animation: slideshow 12s infinite;
+    
+    /* Fixes image skewing */
+    object-fit: cover;   /* Ensures image fills the frame without distortion */
+    object-position: center; /* Centers the image properly */
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 3s; }
+.slide:nth-child(3) { animation-delay: 6s; }
+.slide:nth-child(4) { animation-delay: 9s; }
+
+@keyframes slideshow {
+    0% { opacity: 0; }
+    8.33% { opacity: 1; }  /* Image fully visible */
+    25% { opacity: 1; }    /* Hold image */
+    33.33% { opacity: 0; } /* Start fade out */
+    100% { opacity: 0; }
+}
+
+.sec {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h3, p, .sec button {
+    margin: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    color: #55555f;
+    font: bold 28px urw gothic l;
+}
+
+p {
+    line-height: 1.5em;
+    text-align: left;
+}
+.one{
+	width: 100%;
+	height: 450px;
+	background: #ffffff;
+}
+.margin {
+    margin: auto;
+    width: 83%;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px;
+    position: relative; /* Needed to position above the film */
+    z-index: 2; /* Higher than the overlay */
+}
+
+.box {
+    width: 15%;
+    margin: 1.65%;
+    float: left;
+    box-shadow: 5px 5px 15px #001;
+    height: 450px;
+    background-color: #ffffff; /* Solid white background */
+    position: relative; /* Ensures it's above the film */
+    z-index: 3; /* Highest z-index to be above all layers */
+}
+.box p{
+	margin: 5px;
+	line-height: 1.7em;
+	color: #aaa;
+}
+.intro {
+    width: 100%;
+    height: 450px;
+    background: white;
+}
+
+.intm {
+    width: 80%;
+    margin: auto;
+    height: 87%;
+    background: rgba(206,73,4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.galh3 {
+    font: bold 35px urw gothic l;
+    color: #ddd;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.galp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%; /* Adjusted width for 4 sections */
+}
+
+.para {
+    width: 25%; /* Adjusted width for 4 sections */
+    text-align: center;
+    color: #ddd;
+}
+
+.para h4 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.separator {
+    width: 2px;
+    height: 80%;
+    background-color: #aaa;
+}
+
+
+.two{
+	width: 100%;
+	height: 550px;
+	background: white;
+}
+.gal {
+    width: 70%;
+    margin: auto;
+    height: 350px; /* Keeps your fixed height */
+    
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next row */
+    justify-content: center; /* Centers the images as a group */
+    gap: 15px; /* Adds space between images */
+}
+
+.gal .view {
+    height: 50%; /* Keeps the previous height */
+    width: calc(33.33% - 15px); /* Adjust width to fit 3 images in one row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents images from overflowing */
+}
+
+.gal .view img {
+    width: 100%; /* Ensures the image fills the container */
+    height: 100%; /* Ensures image takes full height of the .view */
+    object-fit: cover; /* Crops and fills the image inside the container */
+    border-radius: 5px; /* Optional: Adds smooth edges */
+}
+
+.gal .view img:hover{
+	transform: scale(1);
+}
+.end{
+	width: 100%;
+	height: 100px;
+	background: #202024;
+}
+
+
